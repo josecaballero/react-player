@@ -9,13 +9,13 @@ import {
 const Player = () => {
   return (
     <div className="player">
-      <div className="time-control">
-        <p>Start Time</p>
-        <input type="range" />
-        <p>End Time</p>
+      <div className="player__timer">
+        <p className="player__text">Start Time</p>
+        <input className="player__range" type="range" />
+        <p className="player__text">End Time</p>
       </div>
 
-      <div className="play-control">
+      <div className="player__controls">
         <FontAwesomeIcon size="2x" className="skip-back" icon={faAngleLeft} />
         <FontAwesomeIcon size="2x" className="play" icon={faPlay} />
         <FontAwesomeIcon
