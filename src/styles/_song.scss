@@ -1,7 +1,20 @@
-.song-container {
+.song {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.song__cover {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.song__name {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.song__artist {
+  font-size: 1rem;
 }
