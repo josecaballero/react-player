@@ -25,7 +25,6 @@ const LibrarySong = ({
         };
       }
     });
-    console.log(newSongs);
     setSongs(newSongs);
 
     // Check if the song is playing
