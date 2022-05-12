@@ -9,6 +9,9 @@
     width: 50%;
     display: flex;
     margin-top: 16px;
+    @media only screen and (max-width: 768px) {
+      width: 90%;
+    }
   }
 
   &__range {
@@ -26,6 +29,10 @@
     align-items: center;
     padding: 1rem;
     width: 30%;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+    }
 
     svg {
       cursor: pointer;
