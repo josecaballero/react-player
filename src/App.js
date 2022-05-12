@@ -5,6 +5,7 @@ import Library from "./components/Library";
 import data from "./util";
 
 import "./styles/app.scss";
+import Nav from "./components/Nav";
 
 function App() {
   // Ref: It allows us to grab something from the JSX
@@ -18,6 +19,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
+  const [libraryStatus, setLibraryStatus] = useState(false);
 
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
@@ -27,7 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <Song currentSong={currentSong} />
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
+      <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
         audioRef={audioRef}
         isPlaying={isPlaying}
@@ -45,6 +48,7 @@ function App() {
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setSongs={setSongs}
+        libraryStatus={libraryStatus}
       />
       <audio
         onLoadedMetadata={timeUpdateHandler}

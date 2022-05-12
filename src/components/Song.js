@@ -4,7 +4,7 @@ const Song = ({ currentSong, isPlaying }) => {
   return (
     <div className="song">
       <img
-        className="song__cover"
+        className={`song__cover ${isPlaying ? "spin" : ""} `}
         src={currentSong.cover}
         alt={currentSong.name}
       />

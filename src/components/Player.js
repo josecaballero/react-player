@@ -37,7 +37,7 @@ const Player = ({
         <p className="player__text">{formatTime(songInfo.currentTime)}</p>
         <input
           min={0}
-          max={songInfo.duration}
+          max={songInfo.duration || 0}
           value={songInfo.currentTime}
           className="player__range"
           type="range"
