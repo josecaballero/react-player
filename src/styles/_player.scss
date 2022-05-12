@@ -55,6 +55,12 @@
     height: 16px;
     width: 16px;
   }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+  }
 }
 
 .track {
